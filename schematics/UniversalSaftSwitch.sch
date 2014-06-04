@@ -19700,6 +19700,9 @@ Source: 008-0260-0_E.pdf</description>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="M0805" value="0"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="M0805" value="0"/>
+<part name="R7" library="rcl" deviceset="R-EU_" device="M0805" value="0"/>
+<part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="GND12" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19762,6 +19765,9 @@ https://github.com/gurgelhals/</text>
 <instance part="JP3" gate="G$1" x="157.48" y="137.16"/>
 <instance part="R6" gate="G$1" x="139.7" y="139.7" rot="R180"/>
 <instance part="R3" gate="G$1" x="200.66" y="144.78" rot="R180"/>
+<instance part="R7" gate="G$1" x="190.5" y="96.52" rot="R180"/>
+<instance part="GND11" gate="1" x="182.88" y="91.44"/>
+<instance part="GND12" gate="1" x="198.12" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -19853,6 +19859,18 @@ https://github.com/gurgelhals/</text>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="154.94" y1="137.16" x2="147.32" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="137.16" x2="147.32" y2="134.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="182.88" y1="93.98" x2="182.88" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="96.52" x2="185.42" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="195.58" y1="96.52" x2="198.12" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="96.52" x2="198.12" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D+" class="0">
