@@ -62,8 +62,9 @@ MCU = attiny2313
 #         F_CPU = 16000000
 #         F_CPU = 18432000
 #         F_CPU = 20000000
-F_CPU = 8000000
 
+F_CPU = 14745600
+#F_CPU = 8000000
 
 # Output format. (can be srec, ihex, binary)
 FORMAT = ihex
@@ -267,7 +268,7 @@ AVRDUDE_PROGRAMMER = avr910
 AVRDUDE_PORT = /dev/ttyUSB0    # programmer connected to serial device
 
 AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex
-#AVRDUDE_WRITE_EEPROM = -U eeprom:w:$(TARGET).eep
+AVRDUDE_WRITE_EEPROM = -U eeprom:w:$(TARGET).eep
 
 
 # Uncomment the following if you want avrdude's erase cycle counter.
